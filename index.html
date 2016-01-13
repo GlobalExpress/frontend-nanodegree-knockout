@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="jquery-1.11.3.js"></script>
+	<script src="knockout-3.4.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="header">
+		<h1>Porto Locations</h1>
+	</div>
+	<div class="mainContainer">
+		<div id="sideMenu">
+			<div id="filterButton">
+				<label>Filter Locations</label>
+				<input placeholder="Filter.." type="text" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
+			</div>
+			<div id="filterList">
+				<ul data-bind="foreach: filterList" style="list-style-type:none"><div id="listItems"><a data-bind="text: name, click: function(){viewModel.updateMarkers(markers)}"></a></div></ul>
+			</div>
+		</div>
+		<div id="map"></div>
+	</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOkG3BNBnRqonNvHJwC2NBN2fxx27jako&callback=initMap"></script>
+	<script src="script.js"></script>
+	<script type="text/javascript" src="ajaxRequest.js"></script>
+</body>
+
+</html>
+

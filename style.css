@@ -1,0 +1,89 @@
+
+h1 {
+	margin: auto;
+	font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+
+ul {
+	padding: 0px;
+	list-style-type: none;
+}
+
+#header {
+	background-color: #7bb489;
+	color: #111111;
+	height: 50px;
+	z-index: 1;
+	text-align: center;
+}
+
+#listItems {
+	width: 100%;
+	margin: 10px;
+	background-color: #777777;
+}
+
+#listItems:active{
+	color: red;
+}
+
+.mainContainer {
+	display: flex;
+	flex-flow: row wrap;
+	overflow: scroll;
+}
+
+#photos{
+	display: flex;
+	flex-flow: row wrap;
+}
+#images {
+	width: 150px;
+	height: 150px;
+}
+
+
+@media (min-width: 769px){
+
+#sideMenu {
+	width: 20%;
+	background-color: #282a2f;
+	height: 100vh;
+}
+
+#map {
+	width: 80%;
+	
+}
+
+#filterButton {
+	padding-top: 50px;
+	color: white;
+}
+
+#filterList {
+	padding-top: 10px;
+	color: white;
+	margin: auto;
+}
+}
+
+@media (max-width: 768px){
+	#sideMenu {
+		width: 100%;
+		background-color: #282a2f;
+		max-height: 400px;
+		text-align: center;
+	}
+	
+	#map {
+		width: 100%;
+		height: 100vh;
+	}
+
+	#filterButton, #filterList {
+		padding-top: 50px;
+		color: white;
+	}
+
+}
